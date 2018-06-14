@@ -1,0 +1,29 @@
+.main-container {
+    padding-top:6vh;
+    display:grid;
+    justify-content: center;
+    grid-template-columns: 60vw;
+}
+mat-card {
+    background-color:#282828;
+}
+mat-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+mat-card-header h1{
+    text-align:center;
+    width:100%;
+    color:#ffffff;
+}
+button {
+    margin-right:8px;
+    background-color:#FF0000;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:bold;
+    padding:8px;
+    width:100%;
+}

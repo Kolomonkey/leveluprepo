@@ -1,0 +1,17 @@
+<div class='main-container'>
+  <div class='sub-container'>
+    <app-youtube-list
+    [playlist]='currentPlaylist'
+    (newPlaylist)='getPlaylist($event)'
+    (pagination)='getPlaylistPagination($event)'
+    (selectedVideo)='selectVideo($event)'>
+
+    </app-youtube-list>
+  </div>
+  <div class='sub-container'>
+    <app-youtube-video
+    [video]='selectedVideo'>
+
+    </app-youtube-video>
+  </div>
+</div>

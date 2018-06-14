@@ -1,0 +1,14 @@
+{
+  "npmScope": "levelup",
+  "projects": {
+    "day2": {
+      "tags": []
+    },
+    "day2-e2e": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    }
+  }
+}

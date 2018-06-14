@@ -1,0 +1,276 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "",
+  "projects": {
+    "day1": {
+      "root": "apps/day1",
+      "sourceRoot": "apps/day1/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/day1",
+            "index": "apps/day1/src/index.html",
+            "main": "apps/day1/src/main.ts",
+            "tsConfig": "apps/day1/tsconfig.app.json",
+            "polyfills": "apps/day1/src/polyfills.ts",
+            "assets": [
+              "apps/day1/src/assets",
+              "apps/day1/src/favicon.ico"
+            ],
+            "styles": [
+              "apps/day1/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "fileReplacements": [
+                {
+                  "replace": "apps/day1/src/environments/environment.ts",
+                  "with": "apps/day1/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "day1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "day1:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "day1:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/day1/src/test.ts",
+            "karmaConfig": "apps/day1/karma.conf.js",
+            "polyfills": "apps/day1/src/polyfills.ts",
+            "tsConfig": "apps/day1/tsconfig.spec.json",
+            "scripts": [],
+            "styles": [
+              "apps/day1/src/styles.css"
+            ],
+            "assets": [
+              "apps/day1/src/assets",
+              "apps/day1/src/favicon.ico"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/day1/tsconfig.app.json",
+              "apps/day1/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "prefix": "app"
+    },
+    "day1-e2e": {
+      "root": "apps/day1-e2e",
+      "sourceRoot": "apps/day1-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/day1-e2e/protractor.conf.js",
+            "devServerTarget": "day1:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/day1-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "prefix": "app"
+    },
+    "material": {
+      "root": "libs/material",
+      "sourceRoot": "libs/material/src",
+      "projectType": "library",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/material/src/test.ts",
+            "karmaConfig": "libs/material/karma.conf.js",
+            "scripts": [],
+            "styles": [],
+            "assets": [],
+            "tsConfig": "libs/material/tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/material/tsconfig.lib.json",
+              "libs/material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      },
+      "prefix": "app"
+    },
+    "day2": {
+      "root": "apps/day2/",
+      "sourceRoot": "apps/day2/src",
+      "projectType": "application",
+      "prefix": "levelup",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/day2",
+            "index": "apps/day2/src/index.html",
+            "main": "apps/day2/src/main.ts",
+            "polyfills": "apps/day2/src/polyfills.ts",
+            "tsConfig": "apps/day2/tsconfig.app.json",
+            "assets": [
+              "apps/day2/src/favicon.ico",
+              "apps/day2/src/assets"
+            ],
+            "styles": [
+              "apps/day2/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/day2/src/environments/environment.ts",
+                  "with": "apps/day2/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "day2:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "day2:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "day2:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/day2/src/test.ts",
+            "polyfills": "apps/day2/src/polyfills.ts",
+            "tsConfig": "apps/day2/tsconfig.spec.json",
+            "karmaConfig": "apps/day2/karma.conf.js",
+            "styles": [
+              "apps/day2/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/day2/src/favicon.ico",
+              "apps/day2/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/day2/tsconfig.app.json",
+              "apps/day2/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "day2-e2e": {
+      "root": "apps/day2-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/day2-e2e/protractor.conf.js",
+            "devServerTarget": "day2:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/day2-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "day1",
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false
+    },
+    "defaultCollection": "@nrwl/schematics"
+  }
+}

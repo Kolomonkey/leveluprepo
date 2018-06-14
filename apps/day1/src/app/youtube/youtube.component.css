@@ -1,0 +1,9 @@
+.main-container {
+    display:grid;
+    grid-template-columns: 49% 49%;
+    grid-column-gap: 2%;
+}
+:host >>> mat-list-item:hover {
+    cursor: pointer;
+    background: #424242;
+}

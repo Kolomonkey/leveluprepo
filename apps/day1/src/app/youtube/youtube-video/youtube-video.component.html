@@ -1,0 +1,12 @@
+<mat-card *ngIf='video'>
+    <iframe
+    width="100%"
+    height="350px"
+    [src]="video.snippet.resourceId.videoId | safe: 'resourceUrl'"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+    <h1>{{video.snippet.title}}</h1>
+</mat-card>
+<mat-card class='select' *ngIf='!video'>
+  <h1>Select a video!</h1>
+</mat-card>

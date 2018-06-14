@@ -1,0 +1,56 @@
+mat-card {
+    background-color: #282828;
+    padding:0;
+}
+mat-card-header {
+    padding-top:15px;
+    padding-bottom:5px;
+    padding-left: 5px;
+    padding-right: 21px;
+    background-color:#202020
+}
+.main-section {
+    display:grid;
+    width:100%;
+    grid-template-columns: 88px auto 88px;
+    grid-column-gap: 25px;
+    align-items: baseline;
+}
+.full-width-field {
+    width:100%;
+}
+.mat-form-field-label .mat-form-field .mat-focused .mat-form-field-label {
+    color: #000!important;
+    background-color:red!important;
+    border-color:red;
+  }
+mat-card-content {
+    height:calc(100vh - 179px);
+}
+mat-list {
+    padding-top:0;
+}
+mat-card mat-list mat-list-item {
+    height:auto;
+    vertical-align: text-top;
+    padding:12px 4px;
+}
+mat-list-item img {
+    margin-right:8px;
+    border: 2px #424242 solid;
+}
+* {
+    color:#FFFFFF;
+}
+mat-list-item:not(:first-of-type) {
+    border-top: 1px solid #424242;
+}
+button {
+    background-color:#FF0000;
+    color:#ffffff;
+    font-size:14px;
+    font-weight:bold;
+}
+button:disabled {
+    background-color: grey;
+}

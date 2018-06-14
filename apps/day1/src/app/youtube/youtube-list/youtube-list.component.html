@@ -1,0 +1,29 @@
+<mat-card>
+  
+  <mat-card-header>
+  <div class='main-section'>
+    <div class='sub-section'>
+    <button mat-raised-button disabled *ngIf='!playlist?.prevPageToken'>Previous</button>
+    <button mat-raised-button *ngIf='playlist?.prevPageToken' (click)='pagination.emit({id: playlist?.items[0]?.snippet?.playlistId, token: playlist?.prevPageToken})'>Previous</button>
+    </div>
+    <div class='sub-section'>
+    <mat-form-field class="full-width-field">
+      <input matInput #input placeholder='Enter Playlist ID' (keyup.enter)="newPlaylist.emit(input.value)">
+    </mat-form-field>
+    </div>
+    <div class='sub-section'>
+    <button mat-raised-button disabled *ngIf='!playlist?.nextPageToken'>Next</button>
+    <button mat-raised-button *ngIf='playlist?.nextPageToken' (click)='pagination.emit({id: playlist?.items[0]?.snippet?.playlistId, token: playlist?.nextPageToken})'>Next</button>
+    </div>
+  </div>
+  </mat-card-header>
+  <mat-card-content [style.overflow]="'auto'">
+  <mat-list>
+    <mat-list-item *ngFor='let video of playlist.items' (click)='selectedVideo.emit(video)'>
+      <img [src]='video.snippet.thumbnails.high.url' height='150px'>
+      <h2>{{video.snippet.title}}</h2>
+    </mat-list-item>
+  </mat-list>
+  </mat-card-content>
+
+</mat-card>

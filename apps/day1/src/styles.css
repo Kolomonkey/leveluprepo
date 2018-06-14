@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    color:#282828;
+}
+h1,h2,h3,h4,h5 {
+    font-family: 'Oswald', sans-serif;
+    color:#282828;
+}
+.mat-form-field-ripple {
+    background-color: #FFF!important;
+    color: #FFF!important;
+}
+.mat-form-field-underline {
+    background-color:#FFF!important;
+}
+.mat-form-field-label {
+    color:#FFF!important;
+}
+.mat-input-element {
+    caret-color: #FFF;
+}
